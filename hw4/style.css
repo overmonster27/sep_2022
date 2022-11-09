@@ -1,0 +1,22 @@
+.body {
+    margin: 0
+}
+
+.product-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.product-title{
+    border: 2px solid black;
+    margin: 5px;
+}
+.product{
+    border: 2px solid black;
+    margin: 2px;
+    width: 10%;
+}
+.product-image{
+    width: 15%;
+}
