@@ -93,7 +93,6 @@
 //     }
 // }
 
-
 // - користувачів зі статусом false
 // for (let i = 0; i < users.length; i++) {
 //     const user = users[i];
