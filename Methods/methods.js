@@ -180,9 +180,13 @@ let users = [
 // console.log(reduce);
 
 
+function validatePIN (pin) {
+    // debugger;/
+    if (!pin  || pin.length !== 4 && pin.length !== 6){
+        return false
+    }
+    return pin.search(/\D/ig) === -1
+}
 
-
-
-
-
-
+console.log(validatePIN("12ty34"));
+console.log(validatePIN("1111"));
