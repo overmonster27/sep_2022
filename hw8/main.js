@@ -152,44 +152,44 @@
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
-class Cinderella {
-    constructor(name, age, footSize,) {
-        this.name = name;
-        this.age = age;
-        this.footSize = footSize;
-    }
-}
-
-let cinArray = [
-    new Cinderella('liza', 29, 41),
-    new Cinderella('nastya', 38, 42),
-    new Cinderella('katya', 58, 43),
-    new Cinderella('victoria', 17, 44),
-    new Cinderella('leron', 45, 35),
-    new Cinderella('ira', 34, 36),
-    new Cinderella('yana', 65, 37),
-    new Cinderella('sasha', 11, 38),
-    new Cinderella('vasilina', 12, 39),
-    new Cinderella('galya', 25, 40),
-];
-
-class Prince {
-    constructor(name, age, findSize) {
-        this.name = name
-        this.age = age
-        this.findSize = findSize
-    }
-}
-
-let newPrince = new Prince('Taras', 26, 39);
+// class Cinderella {
+//     constructor(name, age, footSize,) {
+//         this.name = name;
+//         this.age = age;
+//         this.footSize = footSize;
+//     }
+// }
 //
-let findCoincidence = (Cinderella, Prince) => {
-    for (const cinderellaItem of Cinderella) {
-        if (cinderellaItem.footSize === Prince.findSize){
-            return cinderellaItem
-        }
-    }
-}
-console.log(findCoincidence(cinArray,newPrince))
-
-console.log(cinArray.find(value => value.footSize === newPrince.findSize))
+// let cinArray = [
+//     new Cinderella('liza', 29, 41),
+//     new Cinderella('nastya', 38, 42),
+//     new Cinderella('katya', 58, 43),
+//     new Cinderella('victoria', 17, 44),
+//     new Cinderella('leron', 45, 35),
+//     new Cinderella('ira', 34, 36),
+//     new Cinderella('yana', 65, 37),
+//     new Cinderella('sasha', 11, 38),
+//     new Cinderella('vasilina', 12, 39),
+//     new Cinderella('galya', 25, 40),
+// ];
+//
+// class Prince {
+//     constructor(name, age, findSize) {
+//         this.name = name
+//         this.age = age
+//         this.findSize = findSize
+//     }
+// }
+//
+// let newPrince = new Prince('Taras', 26, 39);
+// //
+// let findCoincidence = (Cinderella, Prince) => {
+//     for (const cinderellaItem of Cinderella) {
+//         if (cinderellaItem.footSize === Prince.findSize){
+//             return cinderellaItem
+//         }
+//     }
+// }
+// console.log(findCoincidence(cinArray,newPrince))
+//
+// console.log(cinArray.find(value => value.footSize === newPrince.findSize));
