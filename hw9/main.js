@@ -174,15 +174,15 @@
 // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
 // Завдання робити через цикли.
 
-let arr = ['Main', 'Products', 'About us', 'Contacts']
-
-let elementsByClassName = document.getElementsByClassName('main')[0];
-for (const string of arr) {
-    let liElement = document.createElement('li');
-    liElement.innerHTML = string;
-
-    elementsByClassName.appendChild(liElement);
-}
+// let arr = ['Main', 'Products', 'About us', 'Contacts']
+//
+// let elementsByClassName = document.getElementsByClassName('main')[0];
+// for (const string of arr) {
+//     let liElement = document.createElement('li');
+//     liElement.innerHTML = string;
+//
+//     elementsByClassName.appendChild(liElement);
+// }
 
 
 // - Є масив
@@ -196,8 +196,22 @@ for (const string of arr) {
 // ];
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
+
+// let mainDiv = document.createElement('div');
+// for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
+//     let header = document.createElement('h1');
+//     header.innerHTML = `${coursesAndDurationArrayElement.title}`;
 //
-// - Є масив
+//     let underHeader = document.createElement('h2');
+//     underHeader.innerHTML = `${coursesAndDurationArrayElement.monthDuration}`;
+//
+//     mainDiv.append(header, underHeader);
+// }
+//
+// document.body.appendChild(mainDiv);
+//
+// -Є
+// масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
 //     {title: 'Java Complex', monthDuration: 6},
@@ -206,21 +220,107 @@ for (const string of arr) {
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-//
+
 //
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
 //     Завдання робити через цикли.
+
+// let main = document.createElement('div');
+// main.className = 'item'
+// for (const element of coursesAndDurationArray) {
+//     let header = document.createElement('h1');
+//     header.className = 'heading';
+//     header.innerHTML = `${element.title}`;
+//
+//     let paragraph = document.createElement('p');
+//     paragraph.className = 'description';
+//     paragraph.innerHTML = `${element.monthDuration}`;
+//
+//     main.append(header, paragraph)
+// }
+// document.body.appendChild(main)
+
+
 //
 //
 //
 // -----------
 //
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
+
+// let main = document.createElement('div');
+// main.id = 'text'
+// main.innerText = 'Push';
+//
+// main.onclick = () => {
+//     main.style.display = 'none';
+//
+// }
+// document.body.appendChild(main);
+//
+
 //
 //
-//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
+//     та повідомити про це користувача
 //
-//
+// let inputElement = document.createElement('input');
+// let buttonElement = document.createElement('button');
+// buttonElement.innerText = 'CHECK';
+// buttonElement.onclick = () => {
+//     if (inputElement.value >= 18) {
+//         alert('GO');
+//     } else {
+//         alert('STOP');
+//     }
+// }
+// document.body.append(inputElement, buttonElement);
+
+
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+
+let row = document.createElement('input');
+let column = document.createElement('input');
+let inText = document.createElement('input');
+let button = document.createElement('button');
+button.innerText = 'Check';
+
+document.body.append(row, column, inText, button);
+
+button.onclick = function (e) {
+    e.preventDefault()
+
+    let field1 = row.value;
+    let field2 = column.value;
+    let field3 = inText.value;
+
+    function Creator(row1, row2, elementText) {
+        let tableElement = document.createElement('table');
+
+        for (let i = 0; i < row1; i++) {
+            let tableRow = document.createElement('tr');
+            tableElement.appendChild(tableRow)
+
+            for (let j = 0; j < row2; j++) {
+                let tableColumn = document.createElement('td');
+                tableColumn.innerText = `${elementText}`;
+                tableColumn.style.border = '2px solid red';
+                tableRow.append(tableColumn);
+            }
+        }
+        document.body.appendChild(tableElement);
+    }
+
+    Creator(field1, field2, field3);
+}
+
+
+
+
+
+
+
+
