@@ -270,7 +270,9 @@
 // buttonElement.onclick = () => {
 //     if (inputElement.value >= 18) {
 //         alert('GO');
-//     } else {
+//     } else if (!inputElement.value) {
+//         alert('false')
+//     } else if (inputElement < 18) {
 //         alert('STOP');
 //     }
 // }
@@ -282,45 +284,37 @@
 // (Додатковачастина для завдання)
 
 
-let row = document.createElement('input');
-let column = document.createElement('input');
-let inText = document.createElement('input');
-let button = document.createElement('button');
-button.innerText = 'Check';
-
-document.body.append(row, column, inText, button);
-
-button.onclick = function (e) {
-    e.preventDefault()
-
-    let field1 = row.value;
-    let field2 = column.value;
-    let field3 = inText.value;
-
-    function Creator(row1, row2, elementText) {
-        let tableElement = document.createElement('table');
-
-        for (let i = 0; i < row1; i++) {
-            let tableRow = document.createElement('tr');
-            tableElement.appendChild(tableRow)
-
-            for (let j = 0; j < row2; j++) {
-                let tableColumn = document.createElement('td');
-                tableColumn.innerText = `${elementText}`;
-                tableColumn.style.border = '2px solid red';
-                tableRow.append(tableColumn);
-            }
-        }
-        document.body.appendChild(tableElement);
-    }
-
-    Creator(field1, field2, field3);
-}
-
-
-
-
-
-
-
-
+// let row = document.createElement('input');
+// let column = document.createElement('input');
+// let inText = document.createElement('input');
+// let button = document.createElement('button');
+// button.innerText = 'Check';
+//
+// document.body.append(row, column, inText, button);
+//
+// button.onclick = function (e) {
+//     e.preventDefault()
+//
+//     let field1 = row.value;
+//     let field2 = column.value;
+//     let field3 = inText.value;
+//
+//     function Creator(row1, row2, elementText) {
+//         let tableElement = document.createElement('table');
+//
+//         for (let i = 0; i < row1; i++) {
+//             let tableRow = document.createElement('tr');
+//             tableElement.appendChild(tableRow)
+//
+//             for (let j = 0; j < row2; j++) {
+//                 let tableColumn = document.createElement('td');
+//                 tableColumn.innerText = `${elementText}`;
+//                 tableColumn.style.border = '2px solid red';
+//                 tableRow.append(tableColumn);
+//             }
+//         }
+//         document.body.appendChild(tableElement);
+//     }
+//
+//     Creator(field1, field2, field3);
+// }
