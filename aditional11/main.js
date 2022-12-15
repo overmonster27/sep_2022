@@ -27,21 +27,21 @@ let arrUsers = JSON.parse(localStorage.getItem('arrUsers'));
 
 for (const User of arrUsers) {
 //
-//     let buttonElement = document.createElement('button');
-//     let middleDiv = document.createElement('div');
-//
-//     buttonElement.innerText = 'ADD TO FAVORITES';
-//
-//     middleDiv.innerHTML = `${User.name} ${User.age} ${User.status}`;
-//
-//     buttonElement.onclick = function (e) {
-//         e.preventDefault();
-//     }
-//
-//     mainDiv.append(middleDiv, buttonElement);
-//
+    let buttonElement = document.createElement('button');
+    let middleDiv = document.createElement('div');
+
+    buttonElement.innerText = 'ADD TO FAVORITES';
+
+    middleDiv.innerHTML = `${User.name} ${User.age} ${User.status}`;
+
+    buttonElement.onclick = function (e) {
+        e.preventDefault();
+    }
+    mainDiv.append(middleDiv, buttonElement);
+
     console.log(User);
 }
-// document.body.appendChild(mainDiv);
-//
-//
+document.body.appendChild(mainDiv);
+
+
+

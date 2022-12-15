@@ -9,7 +9,7 @@
 // //       arr.push(tempStr);
 // //       tempStr = "";
 // //     } else if (str.length - i + 1 < 3) {
-// //       arr.push(str.slice(-(str.length - i + 1)));
+// //       arr.push(str.slice((str.length - i + 1)));
 // //     }
 //
 // //     tempStr += str[i];
