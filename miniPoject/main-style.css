@@ -1,0 +1,11 @@
+.userBlock {
+    display: flex;
+    background: silver;
+    margin: 10px;
+    width: 20%;
+    height: 60px;
+    flex: 1;
+}
+.button{
+    position: relative;
+}
