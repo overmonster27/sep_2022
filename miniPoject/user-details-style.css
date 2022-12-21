@@ -1,0 +1,35 @@
+.detailsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.userBlock {
+    width: 50%;
+    height: 70%;
+
+    border: 2px solid black;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.aBlock {
+    display: flex;
+    justify-content: center;
+
+    width: 30px;
+    width: 90%;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    margin: 10px;
+}
+
+.aHref {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

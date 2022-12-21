@@ -1,29 +1,36 @@
 let url = new URL(location.href);
-let id = url.searchParams.get('id')
+let id = url.searchParams.get("id");
+
+let mainDiv = document.createElement("div");
+mainDiv.className = "mainDiv";
 
 fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-    .then(response => response.json())
-    .then(value => {
-
+    .then((response) => response.json())
+    .then((value) => {
         for (const valueElement of value) {
+            let divElement = document.createElement("div");
+            divElement.className = "divElement";
 
-            let postDiv = document.createElement('div');
+            let postDiv = document.createElement("div");
+            postDiv.className = "post";
 
-            const {
-                userId,
-                id,
-                title,
-                body,
-            } = valueElement
+            const { userId, id, title, body } = valueElement;
 
-            postDiv.innerHTML = `userID: ${userId} id: ${id} title: ${title} body: ${body}`;
+            postDiv.innerHTML = `UserID: ${userId}<br> Id: ${id}<br> Title: ${title}<br> Body: ${body}`;
+
+            let linkBlock = document.createElement("button");
+            linkBlock.className = "link-Block";
 
             let link = document.createElement("a");
+            link.className = 'link';
+
             link.href = `comments.html?id=${id}`;
-            link.innerText = 'comments of current post';
+            link.innerText = "Comments of current post";
 
-            postDiv.append(link);
+            linkBlock.appendChild(link);
 
-            document.body.appendChild(postDiv);
+            divElement.append(postDiv, linkBlock);
+            mainDiv.appendChild(divElement);
         }
-    })
+    });
+document.body.appendChild(mainDiv);

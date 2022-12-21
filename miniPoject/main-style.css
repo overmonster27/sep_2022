@@ -1,11 +1,47 @@
-.userBlock {
+
+
+.divElement {
+    height: 100%;
     display: flex;
-    background: silver;
-    margin: 10px;
-    width: 20%;
-    height: 60px;
-    flex: 1;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.button{
-    position: relative;
+.userBlock {
+    height: 100px;
+    width: 17%;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    margin-top: 40px;
+
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+
+    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+
+}
+.textDiv{
+    height: 70%;
+}
+
+.container-1 a {
+    background: linear-gradient(to bottom, #337AB7 0%, #337AB7 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+.container-1 a:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23337AB7' stroke-width='1' class='squiggle' d='M0,3.5 c 5,0,5,-2,10,-2 s 5,2,10,2 c 5,0,5,-2,10,-2 s 5,2,10,2'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 4px;
+    background-repeat: repeat-x;
+    text-decoration: none;
 }

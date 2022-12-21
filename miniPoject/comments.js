@@ -7,16 +7,11 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
         for (const valueElement of value) {
 
             let head = document.createElement('div');
+            head.className = 'head';
 
-            const {
-                postId,
-                id,
-                name,
-                email,
-                body
-            } = valueElement
+            const {postId, id, name, email, body} = valueElement;
 
-            head.innerHTML = `${postId} ${id} ${name} ${email} ${body}`
+            head.innerHTML = `PostID: ${postId}<br> Id: ${id}<br> Name: ${name}<br> Email: ${email}<br> Body: ${body}`;
 
             document.body.appendChild(head);
         }

@@ -1,0 +1,34 @@
+.mainDiv{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.divElement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 18%;
+    height: 350px;
+
+    border: 2px solid black;
+    margin: 10px;
+}
+.post{
+    height: 300px;
+}
+
+.link-Block{
+    display: flex;
+
+    width: 90%;
+
+    border: 2px solid black;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}

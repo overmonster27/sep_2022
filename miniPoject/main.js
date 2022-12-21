@@ -1,25 +1,34 @@
-let divElement = document.createElement('div');
-divElement.className = 'divElement'
+let divElement = document.createElement("div");
+divElement.className = "divElement";
 
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(value => {
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((value) => {
         for (const valueElement of value) {
-            let element = document.createElement('div');
-            element.className = 'userBlock'
+            let element = document.createElement("div");
+            element.className = "userBlock";
+
+            let innerElement = document.createElement("div");
+            innerElement.className = "textDiv";
 
             const {id, name, username} = valueElement;
-            element.innerHTML = `${id} ${name} ${username}`;
+            innerElement.innerHTML = `${id} ${name} ${username}`;
 
-            let link = document.createElement('a');
-            link.innerText = 'MORE';
-            link.className = 'button'
+            let buttonDiv = document.createElement("div");
+            buttonDiv.className = "container-1";
 
-            link.href = `user-details.html?id=${id}`
+            let link = document.createElement("a");
 
-            element.appendChild(link);
+            link.innerText = "MORE";
+            link.className = "button";
+
+            link.href = `user-details.html?id=${id}`;
+
+            buttonDiv.appendChild(link);
+
+            element.append(buttonDiv, innerElement);
 
             divElement.appendChild(element);
         }
-    })
+    });
 document.body.appendChild(divElement);
