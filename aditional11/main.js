@@ -52,7 +52,8 @@ for (const User of users) {
 
         addToFavorites(userObj);
     };
-    mainDiv.append(middleDiv, buttonElement);
+    middleDiv.appendChild(buttonElement)
+    mainDiv.append(middleDiv);
 
 }
 document.body.append(mainDiv, htmlAnchorElement);
