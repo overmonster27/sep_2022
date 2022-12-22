@@ -6,20 +6,44 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        .mainDiv {
+            border: 2px solid black;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+
+        .htmlAnchor {
+            border: 2px solid black;
+            text-decoration: none;
+            color: black;
+            width: 100%;
+        }
+    </style>
+
 </head>
 <body>
 <script>
+
+    let htmlAnchorElement = document.createElement('a');
+    htmlAnchorElement.className = 'htmlAnchor';
+    htmlAnchorElement.innerText = 'HOME';
+    htmlAnchorElement.href = `index.html`;
 
     let favoritesArr = JSON.parse(localStorage.getItem('favorites'));
 
     for (const favoritesArrElement of favoritesArr) {
 
         let mainDiv = document.createElement('div');
-        mainDiv.innerHTML = favoritesArrElement;
+
+        mainDiv.className = 'mainDiv';
+
+        mainDiv.innerHTML = `Name: ${favoritesArrElement.name} <br> Age: ${favoritesArrElement.age} <br> Status:${favoritesArrElement.status}`;
 
         document.body.appendChild(mainDiv);
     }
-
+    document.body.appendChild(htmlAnchorElement);
 </script>
 </body>
 </html>

@@ -26,24 +26,36 @@ const addToFavorites = (user) => {
 let mainDiv = document.createElement('div');
 mainDiv.className = 'biggest';
 
+let htmlAnchorElement = document.createElement('a');
+htmlAnchorElement.className = "htmlAnchorElement"
+htmlAnchorElement.innerText = 'FAVORITES';
+
+htmlAnchorElement.href = `favorites.html`;
+
 for (const User of users) {
-    let buttonElement = document.createElement('button');
     let middleDiv = document.createElement('div');
+    middleDiv.className = 'middleDiv';
+
+    let buttonElement = document.createElement('button');
+
+    middleDiv.innerHTML = `Name: ${User.name} <br> Age: ${User.age} <br> Status:${User.status}`;
 
     buttonElement.innerText = 'ADD TO FAVORITES';
-    const userDataString = `${User.name} ${User.age} ${User.status}`
 
-    middleDiv.innerHTML = userDataString;
+    let userObj = User;
 
     buttonElement.onclick = function (e) {
+
         e.preventDefault();
-        addToFavorites(userDataString);
+
+        buttonElement.disabled = true;
+
+        addToFavorites(userObj);
     };
     mainDiv.append(middleDiv, buttonElement);
 
-    console.log(User);
 }
-document.body.appendChild(mainDiv);
+document.body.append(mainDiv, htmlAnchorElement);
 
 
 
