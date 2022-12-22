@@ -16,22 +16,17 @@ let users = [
 // обраних об'єктів в локальному сховищі.
 // Створити сторніку favorites.html при переході на яку потрібно вивест в документ всіх обраних на попередньому етапі.
 
-
-// localStorage.setItem('arrUsers',JSON.stringify(users));
 localStorage.setItem('favorites', JSON.stringify([]));
 
-const addTofavorites = (user) => {
+const addToFavorites = (user) => {
     const existingFavorites = JSON.parse(localStorage.getItem('favorites'));
     localStorage.setItem('favorites', JSON.stringify([...existingFavorites, user]));
-}
+};
 
 let mainDiv = document.createElement('div');
-mainDiv.className = 'biggest'
-
-// let arrUsers = JSON.parse(localStorage.getItem('arrUsers'));
+mainDiv.className = 'biggest';
 
 for (const User of users) {
-//
     let buttonElement = document.createElement('button');
     let middleDiv = document.createElement('div');
 
@@ -42,8 +37,8 @@ for (const User of users) {
 
     buttonElement.onclick = function (e) {
         e.preventDefault();
-        addTofavorites(userDataString);
-    }
+        addToFavorites(userDataString);
+    };
     mainDiv.append(middleDiv, buttonElement);
 
     console.log(User);
