@@ -1,0 +1,84 @@
+.style {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainWindow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 440px;
+
+    border: 2px solid black;
+}
+
+.postBlock {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid black;
+    border-radius: 5px;
+
+    margin: 5px 5px;
+    padding: 5px;
+
+    height: 40%;
+    width: 18%;
+}
+
+.divOfCurrentPost {
+    height: 87%;
+    margin-top: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.innerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 120px;
+    width: 17%;
+
+    margin: 10px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.buttonHref {
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: black;
+
+    margin: 5px;
+
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.mainCommentDiv {
+    height: 200px;
+    width: 280px;
+
+    border: 2px solid black;
+    margin: 5px;
+    padding: 2px;
+}
+
