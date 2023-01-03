@@ -12,9 +12,6 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
-// створити під кожен об'єкт свій блок з конопкою "додати до улюблених" при натисканні на яку об'єкт потрапляє до масиву favorites улюблених
-// обраних об'єктів в локальному сховищі.
-// Створити сторніку favorites.html при переході на яку потрібно вивест в документ всіх обраних на попередньому етапі.
 
 localStorage.setItem('favorites', JSON.stringify([]));
 
@@ -32,17 +29,17 @@ htmlAnchorElement.innerText = 'FAVORITES';
 
 htmlAnchorElement.href = `favorites.html`;
 
-for (const User of users) {
+for (const user of users) {
     let middleDiv = document.createElement('div');
     middleDiv.className = 'middleDiv';
 
     let buttonElement = document.createElement('button');
 
-    middleDiv.innerHTML = `Name: ${User.name} <br> Age: ${User.age} <br> Status:${User.status}`;
+    middleDiv.innerHTML = `Name: ${user.name} <br> Age: ${user.age} <br> Status:${user.status}`;
 
     buttonElement.innerText = 'ADD TO FAVORITES';
 
-    let userObj = User;
+    let userObj = user;
 
     buttonElement.onclick = function (e) {
 
