@@ -1,29 +1,5 @@
 let container = document.createElement('div');
-
 container.classList.add('container');
-let formDiv = document.createElement('div');
-
-formDiv.classList.add('formDiv');
-let form = document.createElement('form');
-
-form.classList.add('form');
-let name = document.createElement('input');
-
-name.type = 'Text';
-let count = document.createElement('input');
-count.type = 'Number';
-
-let price = document.createElement('input');
-price.type = 'Number';
-
-let url = document.createElement('input');
-url.type = 'url';
-
-let button = document.createElement('button')
-button.innerText = 'Action';
-
-let productDiv = document.createElement('div');
-productDiv.classList.add('productDiv');
 
 let nextPage = document.createElement('a');
 nextPage.className = 'nextPage'
@@ -33,40 +9,32 @@ nextPage.href = `http://localhost:63342/sep_2022/aditional12/secondTask/list.htm
 let constructor = document.createElement('div');
 constructor.classList.add('constructor');
 
-form.append(name, count, price, url, button);
-formDiv.append(form);
-
-productDiv.append(nextPage, constructor);
-
-container.append(formDiv, productDiv);
+container.append(nextPage, constructor);
 
 document.body.appendChild(container);
 
-localStorage.setItem('product',JSON.stringify([]));
+const form1 = document.querySelector('form');
 
-const productCreator = (product) => {
-    const existingFavorites = JSON.parse(localStorage.getItem('product'));
-    localStorage.setItem('product', JSON.stringify([...existingFavorites, product]));
-};
-button.onclick = function (e) {
-    e.preventDefault();
-    button.disabled = true;
+form1.addEventListener('submit', logSubmit);
 
-    let field1 = name.value;
-    let field2 = count.value;
-    let field3 = price.value;
-    let field4 = url.value;
+function logSubmit(event) {
+    event.preventDefault();
 
-    let productValue = `Name: ${field1}, Count: ${field2}, Price: ${field3}, Url: ${field4}`;
+    const [name, count, price, url] = event.target;
 
-    productCreator(productValue);
+    let contentElement = document.createElement('div');
+    contentElement.className = 'contentElement';
 
-    let img = document.createElement('img');
+    contentElement.innerHTML = `Name: ${name.value} <br> Count: ${count.value} <br> Price: ${price.value}`;
 
-    constructor.appendChild(img);
+    let values = `${name.value}, ${count.value}, ${price.value}, ${url.value}`
 
-    img.src = `${field4}`;
-    constructor.innerHTML = productValue;
+    localStorage.setItem('product', JSON.stringify([values]));
+
+    let imageElement = document.createElement('img');
+    imageElement.className = 'imageElement';
+
+    imageElement.src = `${url.value}`;
+
+    constructor.append(contentElement, imageElement);
 }
-
-

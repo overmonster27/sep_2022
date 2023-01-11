@@ -1,0 +1,40 @@
+body{
+    background-image: url("https://oir.mobi/uploads/posts/2021-03/1616964580_41-p-fon-dlya-saita-42.jpg");
+}
+.divElement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.productDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    border: 5px solid rgba(255, 79, 0, 0.8);
+    border-radius: 20px;
+
+    margin: 10px;
+    padding: 10px;
+}
+
+.backPage{
+    text-decoration: none;
+    color: black;
+
+    border: 3px solid rgba(255, 79, 0, 0.8);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 2px;
+}
+.textHeader{
+    font-family: "Segoe UI Historic", serif;
+}
+
+.url{
+    height: 200px;
+    width: 200px;
+}

@@ -1,5 +1,8 @@
 body {
     background-image: url("https://oir.mobi/uploads/posts/2021-03/1616964580_41-p-fon-dlya-saita-42.jpg");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -11,26 +14,34 @@ body {
     flex-direction: column;
 }
 
-.productDiv {
+.constructor {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+
+    border: 5px solid rgba(255, 79, 0, 0.8);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 2px;
+
+    height: 300px;
+    width: 300px;
+}
+.nextPage{
+    text-decoration: none;
+    color: black;
+
+    border: 3px solid rgba(255, 79, 0, 0.8);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 2px;
 }
 
-.constructor {
-    border: 2px solid black;
-
+.imageElement{
     height: 200px;
     width: 200px;
 }
-.nextPage{
-    color: black;
-    background: rgba(250, 100, 31, 0.54);
-    text-decoration: none;
-    height: 20px;
-    border: 2px solid black;
-    border-radius: 8px;
-    margin: 10px;
-
+.contentElement{
+    font-size: 20px;
 }

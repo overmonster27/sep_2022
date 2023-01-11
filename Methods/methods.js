@@ -44,6 +44,7 @@
 // console.log(newString);
 //
 // let obj = 'name:"oleh",age:31';
+
 // // Розділяє стрінгу по знаку указаному в сепараторі і ПЕРЕТВОРЮЄ НА МАСИВ
 // let split = obj.split(',')
 // console.log(split);
@@ -88,18 +89,18 @@
 // let newArr = arr.concat(nums);
 // console.log(newArr);
 
-let users = [
-    {name: 'vasya', age: '31', status: false},
-    {name: 'oleh', age: '56', status: true},
-    {name: 'ihor', age: '12', status: false},
-    {name: 'vika', age: '23', status: true},
-    {name: 'yana', age: '45', status: false},
-    {name: 'artem', age: '12', status: true},
-    {name: 'yura', age: '41', status: true},
-    {name: 'anya', age: '21', status: false},
-    {name: 'koylya', age: '30', status: true},
-    {name: 'ira', age: '43', status: false}
-]
+// let users = [
+//     {name: 'vasya', age: '31', status: false},
+//     {name: 'oleh', age: '56', status: true},
+//     {name: 'ihor', age: '12', status: false},
+//     {name: 'vika', age: '23', status: true},
+//     {name: 'yana', age: '45', status: false},
+//     {name: 'artem', age: '12', status: true},
+//     {name: 'yura', age: '41', status: true},
+//     {name: 'anya', age: '21', status: false},
+//     {name: 'koylya', age: '30', status: true},
+//     {name: 'ira', age: '43', status: false}
+// ]
 //
 // // Функція вирізає обєкти з масиву в аргументах (з(елемент) по (елемент))
 // // та по можливості можна додати скільки елементів скільки забажаєш
