@@ -180,13 +180,29 @@
 // console.log(reduce);
 
 
-function validatePIN (pin) {
-    // debugger;/
-    if (!pin  || pin.length !== 4 && pin.length !== 6){
-        return false
-    }
-    return pin.search(/\D/ig) === -1
-}
+// function validatePIN (pin) {
+//     if (!pin  || pin.length !== 4 && pin.length !== 6){
+//         return false
+//     }
+//     return pin.search(/\D/ig) === -1
+// }
+//
+// console.log(validatePIN("12ty34"));
+// console.log(validatePIN("1111"));
 
-console.log(validatePIN("12ty34"));
-console.log(validatePIN("1111"));
+
+// lS - Структура текущей папки
+// Cd - Змінитим папку
+// Cd.. - Рівенень вище
+//git help - Список команд
+// git branch -a - показати усі гілки
+// git add . - Додати змінеді файли для коміту
+// git commit -m 'Massage' - Закомітити додані файли
+// git push - Запушити на гіт хаб
+// git push origin NAME BRUNCH - Запушити файли якщо гіки немає на гітхаб
+// git pull - Зтянути з гіт хаба усі файли
+// git checkout BRUNCH NAME - Перейти на описану гілку
+// git checkout -b NAME NEW BRUNCH - Створити нову гілку з відповідною назвою
+// git status - Статус коміта по даній гілці
+// git stash - Запхати зміни в архів на деякий час
+// git apply -
